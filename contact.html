@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href=".\assets\boxicons\css\boxicons.min.css" />
+    <link href="./assets/css/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-[#1f1f1f]">
+    <nav
+      class="flex flex-row justify-between text-[#e5e5e5] border-b-[1.5px] p-7 max-sm:p-5"
+    >
+      <div class="ml-10 text-2xl capitalize md:mr-5 max-sm:ml-1">
+        projecthanif
+      </div>
+      <ul class="flex space-x-8 mr-14 max-md:hidden max-sm:hidden">
+        <li>
+          <a href="index.html" class="hover:text-teal-300">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="hover:text-teal-300">About</a>
+        </li>
+        <li>
+          <a href="project.html" class="hover:text-teal-300">Projects</a>
+        </li>
+        <li>
+          <a href="techstack.html" class="hover:text-teal-300">TechStack</a>
+        </li>
+        <li>
+          <a href="contact.html" class="hover:text-teal-300">Contact</a>
+        </li>
+      </ul>
+      <div class="hidden max-sm:flex" id="menu">
+        <i class="bx bx-menu fa-2x"></i>
+      </div>
+      <ul
+        class="hidden w-full *:pt-3 bg-[#1f1f1f] absolute right-0 p-3 justify-center"
+        id="navbar"
+      >
+        <div class="hidden max-sm:flex" id="close">
+          <i class="text-red-700 bx bx-x fa-2x"></i>
+        </div>
+        <li>
+          <a href="index.html" class="hover:text-teal-300">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="hover:text-teal-300">About</a>
+        </li>
+        <li>
+          <a href="project.html" class="hover:text-teal-300">Projects</a>
+        </li>
+        <li>
+          <a href="techstack.html" class="hover:text-teal-300">TechStack</a>
+        </li>
+        <li>
+          <a href="contact.html" class="hover:text-teal-300">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <main class="ma">
+      <section class="p-20 pl-40 pr-40 mt-28 max-md:p-3 max-sm:p-3">
+        <form>
+          <div class="flex flex-row justify-between w-full max-sm:flex-wrap">
+            <div class="flex flex-col">
+              <label for="name" class="mb-2 text-white">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                id=""
+                class="w-[300px] p-3 border border-gray-300 rounded-2xl bg-slate-400 max-sm:w-[300px]"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label for="email" class="mb-2 text-white">Email</label>
+              <input
+                type="email"
+                name="email"
+                id=""
+                class="p-3 border border-gray-300 rounded-2xl w-[300px] bg-slate-400 max-sm:w-[300px]"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col mt-5">
+            <label for="subject" class="mb-2 text-white">Subject</label>
+            <input
+              type="text"
+              name="subject"
+              id=""
+              class="w-full p-3 border border-gray-300 rounded-2xl bg-slate-400"
+            />
+          </div>
+          <div class="flex flex-col mt-5">
+            <label for="message" class="mb-2 text-white">Message</label>
+            <textarea
+              name=""
+              id=""
+              name="message"
+              rows="10"
+              class="w-full p-3 border border-gray-300 rounded-2xl bg-slate-400"
+            ></textarea>
+          </div>
+          <div class="mt-10">
+            <button
+              type="submit"
+              class="p-3 text-white bg-green-400 border border-none rounded-lg"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+  <script src="./assets/js/app.js"></script>
+</html>
