@@ -1,27 +1,23 @@
 {% extends "portfolio/base.html" %}
       {% block content %}
       {% load static %}
-      <section
-        class="flex flex-row justify-between w-full p-10 mb-10 max-md:p-1 max-sm:p-1 max-sm:flex-wrap-reverse"
-      >
+      <section class="flex flex-row justify-between w-full p-10 mb-10 max-md:p-1 max-sm:p-1 max-sm:flex-wrap-reverse">
         <div class="ml-10 font-mono max-sm:m-4">
           <div class="p-10 text-white max-sm:p-1">
-            <div class="my-5 text-[#ffffff] capitalize text-4xl font-semibold">
-              <h2 class="font-mono">I'm Mustapha,</h2>
+            <div class="my-5 text-[#ffffff] text-4xl font-semibold">
+              <h2 class="font-mono">I'm Hamzat,</h2>
               <p>a back-end developer</p>
             </div>
             <p class="mb-3 text-3xl font-semibold max-sm:m-0 max-sm:text-2xl">
-              I Build <span class="text-[#9a9796]">Scalable</span>
+              I build <span class="text-[#9a9796]">scalable</span> and <span class="text-[#9a9796]">secure</span>
               Web applications
             </p>
-            <p
-              class="mb-6 text-3xl tracking-widest max-sm:m-0 max-sm:text-2xl"
-            ></p>
+            <pclass="mb-6 text-3xl tracking-widest max-sm:m-0 max-sm:text-2xl"></p>
             <p class="mt-10 text-xl">
               Got an idea to work on and need help? <br />
               Bring your idea in a descriptive documentation and
               <br />
-              I'll make a scalable tech for you.
+              I'll make an application for you.
             </p>
           </div>
           <div class="ml-10">
@@ -29,13 +25,13 @@
             <div class="flex flex-row mt-2 align-bottom">
               <p class="mr-4 font-mono text-white">Let's connect!</p>
               <p>
-                <a href="mailto:iamustapha213@gmail.com">
+                <a href="mailto:hamzatadebayo5@gmail.com">
                   <i class="text-red-600 bx bxl-gmail fa-2x"></i>
                 </a>
-                <a href="https://github.com/projecthanif">
+                <a href="https://github.com/Blackburn0" target='blank'>
                   <i class="bx bxl-github fa-2x"></i>
                 </a>
-                <a href="https://twitter.com/projecthanif">
+                <a href="https://twitter.com/HamzatAdebayo8" target='blank'>
                   <i class="text-blue-500 bx bxl-twitter fa-2x"></i>
                 </a>
               </p>
@@ -46,42 +42,39 @@
           <img src="{% static "assets/image/hero.png" %}" alt="" />
         </div>
       </section>
-      <section
-        class="flex flex-row justify-between p-20 bg-[#25262a] max-md:p-1 max-sm:p-1 max-sm:flex-wrap"
-      >
+
+      <section class="flex flex-row justify-between p-20 bg-[#25262a] max-md:p-1 max-sm:p-1 max-sm:flex-wrap">
         <div class="w-[400px]">
           <img src="{% static "assets/illustration/illus2.svg" %}" alt="" />
         </div>
         <div class="text-white w-[450px] max-sm:p-2">
-          <h4
-            class="mb-3 font-mono text-xl font-bold text-center text-gray-100"
-          >
+          {% for about_me in about %}
+          <h4 class="mb-3 font-mono text-xl font-bold text-center text-gray-100">
             About Me
           </h4>
           <h2 class="mb-5 font-mono text-3xl">Hi! I'm Mustapha Ibrahim</h2>
           <p class="text-md max-sm:mb-3">
-            A passionate web developer with a year of experiance in developing
-            web application with php and laravel, I also have kin interest in
-            bringing UI design to life using different technology available at
-            my disposal and I love to create functional and dynamic web
-            applications. I like the web and how exciting it is to build on. I
-            am constantly learning new stuff!
+            {{about_me.about_detail}}
           </p>
+          {% endfor %}
         </div>
       </section>
+
       <section class="p-10 text-white">
         <div class="mb-5 text-center">
           <h1 class="font-mono text-3xl">My Tech Stack</h1>
         </div>
         <div class="grid grid-cols-4 gap-3 space-y-5 max-sm:grid-cols-3">
           <div class="flex flex-col text-center text-blue-700">
-            <i class="fa-brands fa-php fa-3x"></i>
-            <h4 class="text-xl">PHP</h4>
+            <i class="fa-brands fa-python fa-3x"></i>
+            <h4 class="text-xl">Python</h4>
           </div>
-          <div class="flex flex-col text-center text-red-500">
-            <i class="fa-brands fa-laravel fa-3x"></i>
-            <h4 class="text-xl">Laravel</h4>
+          {% comment %} Django icon {% endcomment %}
+          <div class="flex flex-col text-center text-yellow-500">
+            <i class="fa-brands fa- fa-3x"></i>
+            <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" class="fa-brands fa- fa-3x" alt="django" width="70" height="70"/> 
           </div>
+
           <div class="flex flex-col text-center text-red-500">
             <i class="fa-brands fa-html5 fa-3x"></i>
             <h4 class="text-xl">HTML</h4>
@@ -94,10 +87,7 @@
             <i class="fa-brands fa-js fa-3x"></i>
             <h4 class="text-xl">JAVASCRIPT</h4>
           </div>
-          <div class="flex flex-col text-center text-purple-500">
-            <i class="fa-brands fa-bootstrap fa-3x"></i>
-            <h4 class="text-xl">Bootstrap</h4>
-          </div>
+
           <div class="flex flex-col text-center text-blue-500">
             <i class="text-6xl bx bxl-tailwind-css"></i>
             <h4 class="text-xl">Tailwind Css</h4>
@@ -106,59 +96,48 @@
             <i class="fa-solid fa-database fa-3x"></i>
             <h4 class="text-xl">MYSQL</h4>
           </div>
-          <!-- <div class="ml-28">
-            <img
-              src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg"
-              alt="dart logo"
-              class="w-10"
-            />
-            <h4 class="text-xl">Dart</h4>
-          </div> -->
+
           <div class="flex flex-col text-center text-blue-400">
-            <i class="bx bxl-flutter fa-3x"></i>
-            <h4 class="text-xl">Flutter</h4>
+            <i class="bx bxl-docker fa-3x"></i>
+            <h4 class="text-xl">Docker</h4>
           </div>
 
           <div class="flex flex-col text-center">
             <i class="fa-brands fa-github fa-3x"></i>
             <h4 class="text-xl">Github</h4>
           </div>
+
+          <div class="flex flex-col text-center">
+            <i class="text-red-600 fa-brands fa-git-alt fa-3x"></i>
+            <h4 class="text-xl">Git</h4>
+          </div>
           <!-- <i class="text-red-600 fa-brands fa-git-alt fa-3x"></i>
           <i class="text-blue-600 fa-brands fa-docker fa-3x"></i> -->
         </div>
       </section>
+
       <section class="bg-[#25262a] p-12 text-white max-sm:p-5">
         <div class="mb-10 font-mono text-3xl text-center">
           <h3 class="">Projects</h3>
           <p class="text-md">Things i have built so far</p>
         </div>
-        <div
-          class="grid grid-cols-3 gap-x-3 gap-y-36 *:mb-4 mt-6 mb-20 max-sm:grid-cols-1"
-        >
+        <div class="grid grid-cols-3 gap-x-3 gap-y-36 *:mb-4 mt-6 mb-20 max-sm:grid-cols-1">
+          {% for project in projects %}
           <div class="rounded-md shadow-2xl w-80">
-            <img
-              src="{% static "assets/image/tech.png" %}"
-              class="rounded-md h-fit"
-              alt=""
-            />
+            <img src="{{project.image.url}}" class="rounded-md h-fit" alt=""/>
             <div class="p-4">
-              Tech Stack: <br />
-              Php, Laravel, Mysql, Html ,Javascript ,Paystack Payment GateWay
+              Tech Stack: {{project.tech_stack}}
               <div>
                 <i class="bx bxl-github" style="color: #ffffff"></i>
-                <a href="https://github.com/projecthanif/TechPlanet_" class="text-red-500">
-                  TechPlanet github
-                </a>
-              </div>
-              <div>
+                <a href="{{project.source_link}}" target='_blank' class="text-red-500">{{project.title}}</a>
+                <br>
                 <i class="bx bx-link" style="color: #ffffff"></i>
-                <a href="https://al-ibrabmemorialschool.com.ng/" class="text-red-500">
-                  Al-ibrab live
-                </a>
+                <a href="{{project.live_link}}" target="_blank" class="text-red-500">{{project.title}}</a>
               </div>
             </div>
           </div>
-          
+          {% endfor %}
         </div>
       </section>
+      {% include "portfolio/footer.html" %}
       {% endblock content %}

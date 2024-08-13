@@ -13,13 +13,12 @@
     />
     <link rel="stylesheet" href="{% static "assets\boxicons\css\boxicons.min.css" %}" />
     <link href="{% static "assets/css/output.css" %}" rel="stylesheet" />
+    <title>Hamzat Adebayo Hamzat</title>
   </head>
   <body class="bg-[#1f1f1f]">
-    <nav
-      class="flex flex-row justify-between text-[#e5e5e5] border-b-[1.5px] p-7 max-sm:p-5"
-    >
+    <nav class="flex flex-row justify-between text-[#e5e5e5] border-b-[1.5px] p-7 max-sm:p-5">
       <div class="ml-10 text-2xl capitalize md:mr-5 max-sm:ml-1">
-        projecthanif
+        Blackburn0
       </div>
       <ul class="flex space-x-8 mr-14 max-md:hidden max-sm:hidden">
         <li>
@@ -41,10 +40,7 @@
       <div class="hidden max-sm:flex" id="menu">
         <i class="bx bx-menu fa-2x"></i>
       </div>
-      <ul
-        class="hidden w-full *:pt-3 bg-[#1f1f1f] absolute right-0 p-3 justify-center"
-        id="navbar"
-      >
+      <ul class="hidden w-full *:pt-3 bg-[#1f1f1f] absolute right-0 p-3 justify-center" id="navbar">
         <div class="hidden max-sm:flex" id="close">
           <i class="text-red-700 bx bx-x fa-2x"></i>
         </div>
@@ -66,17 +62,9 @@
       </ul>
     </nav>
     <main>
-{% block content %}
-{% endblock content %}
+    {% block content %}
+    {% endblock content %}
     </main>
-    <footer class="p-20 text-white max-sm:p-2">
-      <div class="">
-        <h1 class="font-mono text-3xl max-sm:text-sm">
-          Let's start by building something interesting together
-        </h1>
-        <h2 class="mt-5 font-mono text-xl">projecthanif</h2>
-      </div>
-    </footer>
   </body>
   <script src="{% static "assets/js/app.js" %}"></script>
 </html>
