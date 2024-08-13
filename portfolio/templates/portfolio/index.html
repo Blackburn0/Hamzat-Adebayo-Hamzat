@@ -1,70 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href=".\assets\boxicons\css\boxicons.min.css" />
-    <link href="./assets/css/output.css" rel="stylesheet" />
-  </head>
-  <body class="bg-[#1f1f1f]">
-    <nav
-      class="flex flex-row justify-between text-[#e5e5e5] border-b-[1.5px] p-7 max-sm:p-5"
-    >
-      <div class="ml-10 text-2xl capitalize md:mr-5 max-sm:ml-1">
-        projecthanif
-      </div>
-      <ul class="flex space-x-8 mr-14 max-md:hidden max-sm:hidden">
-        <li>
-          <a href="index.html" class="hover:text-teal-300">Home</a>
-        </li>
-        <li>
-          <a href="about.html" class="hover:text-teal-300">About</a>
-        </li>
-        <li>
-          <a href="project.html" class="hover:text-teal-300">Projects</a>
-        </li>
-        <li>
-          <a href="techstack.html" class="hover:text-teal-300">TechStack</a>
-        </li>
-        <li>
-          <a href="contact.html" class="hover:text-teal-300">Contact</a>
-        </li>
-      </ul>
-      <div class="hidden max-sm:flex" id="menu">
-        <i class="bx bx-menu fa-2x"></i>
-      </div>
-      <ul
-        class="hidden w-full *:pt-3 bg-[#1f1f1f] absolute right-0 p-3 justify-center"
-        id="navbar"
-      >
-        <div class="hidden max-sm:flex" id="close">
-          <i class="text-red-700 bx bx-x fa-2x"></i>
-        </div>
-        <li>
-          <a href="index.html" class="hover:text-teal-300">Home</a>
-        </li>
-        <li>
-          <a href="about.html" class="hover:text-teal-300">About</a>
-        </li>
-        <li>
-          <a href="project.html" class="hover:text-teal-300">Projects</a>
-        </li>
-        <li>
-          <a href="techstack.html" class="hover:text-teal-300">TechStack</a>
-        </li>
-        <li>
-          <a href="contact.html" class="hover:text-teal-300">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <main>
+{% extends "portfolio/base.html" %}
+      {% block content %}
+      {% load static %}
       <section
         class="flex flex-row justify-between w-full p-10 mb-10 max-md:p-1 max-sm:p-1 max-sm:flex-wrap-reverse"
       >
@@ -107,14 +43,14 @@
           </div>
         </div>
         <div class="w-[500px] max-md:hidden">
-          <img src="./assets/image/hero.png" alt="" />
+          <img src="{% static "assets/image/hero.png" %}" alt="" />
         </div>
       </section>
       <section
         class="flex flex-row justify-between p-20 bg-[#25262a] max-md:p-1 max-sm:p-1 max-sm:flex-wrap"
       >
         <div class="w-[400px]">
-          <img src="./assets/illustration/illus2.svg" alt="" />
+          <img src="{% static "assets/illustration/illus2.svg" %}" alt="" />
         </div>
         <div class="text-white w-[450px] max-sm:p-2">
           <h4
@@ -201,7 +137,7 @@
         >
           <div class="rounded-md shadow-2xl w-80">
             <img
-              src="./assets/image/tech.png"
+              src="{% static "assets/image/tech.png" %}"
               class="rounded-md h-fit"
               alt=""
             />
@@ -210,105 +146,19 @@
               Php, Laravel, Mysql, Html ,Javascript ,Paystack Payment GateWay
               <div>
                 <i class="bx bxl-github" style="color: #ffffff"></i>
-                <a
-                  href="https://github.com/projecthanif/TechPlanet_"
-                  class="text-red-500"
-                  >TechPlanet github</a
-                >
+                <a href="https://github.com/projecthanif/TechPlanet_" class="text-red-500">
+                  TechPlanet github
+                </a>
               </div>
-            </div>
-          </div>
-          <div class="rounded-md shadow-2xl w-80">
-            <img
-              src="./assets/image/food2.png"
-              class="rounded-md h-fit"
-              alt=""
-            />
-            <div class="p-4">
-              Tech Stack: <br />
-              HTML,CSS,JAVASCRIPT,PHP,MYSQL
-              <div>
-                <i class="bx bxl-github" style="color: #ffffff"></i>
-                <a
-                  href="https://github.com/projecthanif/foodvendor"
-                  class="text-red-500"
-                  >foodvendor github</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="rounded-md shadow-2xl w-80">
-            <img
-              src="./assets/image/signup.png"
-              class="rounded-md h-fit"
-              alt=""
-            />
-            <img
-              src="./assets/image/remindme.png"
-              class="rounded-md h-fit"
-              alt=""
-            />
-            <div class="p-4">
-              Tech Stack: <br />
-              HTML,CSS,JAVASCRIPT,PHP,MYSQL
-              <div>
-                <i class="bx bxl-github" style="color: #ffffff"></i>
-                <a
-                  href="https://github.com/projecthanif/remind.me"
-                  class="text-red-500"
-                  >remindme with vanilla php</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="rounded-md shadow-2xl w-80">
-            <img
-              src="./assets/image/cattle.png"
-              class="rounded-md h-fit"
-              alt=""
-            />
-            <div class="p-4">
-              Tech Stack: <br />
-              HTML, CSS, JAVASCRIPT, PHP, MYSQL, LARAVEL
               <div>
                 <i class="bx bx-link" style="color: #ffffff"></i>
-                <a href="http://cattletrackqrcode.com.ng" class="text-red-500"
-                  >FarmHerd live</a
-                >
+                <a href="https://al-ibrabmemorialschool.com.ng/" class="text-red-500">
+                  Al-ibrab live
+                </a>
               </div>
             </div>
           </div>
-          <div class="rounded-md shadow-2xl w-80">
-            <img
-              src="./assets/image/alibrab.png"
-              class="rounded-md h-fit"
-              alt=""
-            />
-            <div class="p-4">
-              Tech Stack: <br />
-              HTML, CSS, JAVASCRIPT, PHP, MYSQL, LARAVEL
-              <div>
-                <i class="bx bx-link" style="color: #ffffff"></i>
-                <a
-                  href="https://al-ibrabmemorialschool.com.ng/"
-                  class="text-red-500"
-                  >Al-ibrab live</a
-                >
-              </div>
-            </div>
-          </div>
+          
         </div>
       </section>
-    </main>
-    <footer class="p-20 text-white max-sm:p-2">
-      <div class="">
-        <h1 class="font-mono text-3xl max-sm:text-sm">
-          Let's start by building something interesting together
-        </h1>
-        <h2 class="mt-5 font-mono text-xl">projecthanif</h2>
-      </div>
-    </footer>
-  </body>
-  <script src="./assets/js/app.js"></script>
-</html>
+      {% endblock content %}
