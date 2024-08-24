@@ -1,0 +1,61 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block content %}
+      <section class="p-10 mt-5 text-white max-sm:p-2">
+        <div class="mb-5 text-center">
+          <h1 class="font-mono text-3xl">My Tech Stack</h1>
+        </div>
+        
+        <div class="grid grid-cols-4 gap-3 space-y-5 max-sm:grid-cols-3">
+          <div class="flex flex-col text-center text-blue-700">
+            <i class="fa-brands fa-python fa-3x"></i>
+            <h4 class="text-xl">Python</h4>
+        </div>
+
+        {% comment %} Django icon {% endcomment %}
+        <div class="flex flex-col text-center text-yellow-500">
+          <i class="fa-brands fa- fa-3x"></i>
+          <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" class="fa-brands fa- fa-3x" alt="django" width="70" height="70"/> 
+        </div>
+
+         
+        <div class="flex flex-col text-center text-red-500">
+          <i class="fa-brands fa-html5 fa-3x"></i>
+          <h4 class="text-xl">HTML</h4>
+        </div>
+        <div class="flex flex-col text-center text-blue-600">
+          <i class="fa-brands fa-css3-alt fa-3x"></i>
+          <h4 class="text-xl">CSS</h4>
+        </div>
+        <div class="flex flex-col text-center text-yellow-500">
+          <i class="fa-brands fa-js fa-3x"></i>
+          <h4 class="text-xl">JAVASCRIPT</h4>
+        </div>
+
+        <div class="flex flex-col text-center text-blue-500">
+          <i class="text-6xl bx bxl-tailwind-css"></i>
+          <h4 class="text-xl">Tailwind Css</h4>
+        </div>
+        
+        <div class="flex flex-col text-center">
+          <i class="fa-solid fa-database fa-3x"></i>
+          <h4 class="text-xl">MYSQL</h4>
+        </div>
+
+        <div class="flex flex-col text-center text-blue-400">
+          <i class="bx bxl-docker fa-3x"></i>
+          <h4 class="text-xl">Docker</h4>
+        </div>
+
+        <div class="flex flex-col text-center">
+          <i class="fa-brands fa-github fa-3x"></i>
+          <h4 class="text-xl">Github</h4>
+        </div>
+
+        <div class="flex flex-col text-center">
+          <i class="text-red-600 fa-brands fa-git-alt fa-3x"></i>
+          <h4 class="text-xl">Git</h4>
+        </div>
+      </div>
+      </section>
+  {% endblock content %}

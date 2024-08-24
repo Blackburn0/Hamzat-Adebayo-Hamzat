@@ -1,8 +1,12 @@
-from multiprocessing import context
-from typing import Any
-from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, TemplateView
 from .models import About, Project, Expereince, Education, Contact
+from django.views.generic.edit import FormView
+from django.core.mail import send_mail
+from django.conf import settings
+from django.contrib import messages
+from django.urls import reverse_lazy
+from .forms import ContactForm
+
 
 # Create your views here.
 class HomeView(ListView):
@@ -25,3 +29,11 @@ class AboutView(ListView):
         context['experiences'] = Expereince.objects.all() # This line connect the model you want to add to the List view
         context['educations'] = Education.objects.all() # This line connect the model you want to add to the List view
         return context
+    
+class ProjectView(ListView):
+    model = Project
+    template_name = 'portfolio/project.html'
+    context_object_name = 'projects'
+
+class TechStackView(TemplateView):
+    template_name = 'portfolio/tech_stack.html'
