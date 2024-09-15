@@ -1,11 +1,5 @@
 from django.views.generic import ListView, TemplateView
-from .models import About, Project, Expereince, Education, Contact
-from django.views.generic.edit import FormView
-from django.core.mail import send_mail
-from django.conf import settings
-from django.contrib import messages
-from django.urls import reverse_lazy
-from .forms import ContactForm
+from .models import About, Project, Expereince, Education, Certification
 
 
 # Create your views here.
@@ -37,3 +31,10 @@ class ProjectView(ListView):
 
 class TechStackView(TemplateView):
     template_name = 'portfolio/tech_stack.html'
+
+
+class CertificationView(ListView):
+    model = Certification
+    template_name = 'portfolio/certification.html'
+    context_object_name = 'certifications'
+    

@@ -1,0 +1,23 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block content %}
+      <section class="bg-[#25262a] p-12 text-white max-sm:p-5">
+        <div class="mb-10 font-mono text-3xl text-center">
+          <h3 class="">Certifications</h3>
+          {% comment %} <p class="text-md">Things i have built so far</p> {% endcomment %}
+        </div>
+        <div class="grid grid-cols-3 gap-x-3 gap-y-36 *:mb-4 mt-6 mb-20 max-sm:grid-cols-1" >
+          {% for certification in certifications %}
+          <div class="rounded-md shadow-2xl w-80">
+            <img src="{{certification.image.url}}" class="rounded-md h-fit" alt=""/>
+            <div class="p-4">
+              <div>
+                <i class="bx bx-link" style="color: #ffffff"></i>
+                <a href="{{certification.live_link}}" target="_blank" class="text-red-500">{{certification.title}}</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      {% endblock content %}

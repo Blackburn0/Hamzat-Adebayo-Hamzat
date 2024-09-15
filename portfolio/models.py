@@ -1,4 +1,3 @@
-from pyexpat import model
 from django.db import models
 
 # Create your models here.
@@ -44,10 +43,10 @@ class Project(models.Model):
     def __str__(self):
         return self.title
 
-class Contact(models.Model):
-    sender_emial = models.EmailField()
-    subject = models.CharField(max_length=300)
-    message = models.TextField()
+class Certification(models.Model):
+    title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='Certifications Image')
+    live_link = models.URLField(blank=True, null=True)
 
     def __str__(self):
-        return self.subject
+        return self.title
