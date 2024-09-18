@@ -31,8 +31,8 @@
                 <a href="https://github.com/Blackburn0" target='blank'>
                   <i class="bx bxl-github fa-2x"></i>
                 </a>
-                <a href="https://twitter.com/HamzatAdebayo8" target='blank'>
-                  <i class="text-blue-500 bx bxl-twitter fa-2x"></i>
+                <a href="https://www.linkedin.com/in/hamzat-adebayo/" target='blank'>
+                  <i class="text-blue-500 bx bxl-linkedin fa-2x"></i>
                 </a>
               </p>
             </div>
@@ -52,7 +52,7 @@
           <h4 class="mb-3 font-mono text-xl font-bold text-center text-gray-100">
             About Me
           </h4>
-          <h2 class="mb-5 font-mono text-3xl">Hi! I'm Mustapha Ibrahim</h2>
+          <h2 class="mb-5 font-mono text-3xl">Hi! I'm Hamzat Adebayo Hamzat</h2>
           <p class="text-md max-sm:mb-3">
             {{about_me.about_detail}}
           </p>
@@ -66,25 +66,16 @@
         </div>
         <div class="grid grid-cols-4 gap-3 space-y-5 max-sm:grid-cols-3">
 
-          <div class="flex flex-col text-center text-blue-700">
-            <i class="fa-brands fa-python fa-3x"></i>
-            <h4 class="text-xl">Python</h4>
-          </div>
-
-          {% comment %} Django icon {% endcomment %}
-          <div class="flex flex-col text-center text-yellow-500">
-            <i class="fa-brands fa- fa-3x"></i>
-            <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" class="fa-brands fa- fa-3x" alt="django" width="70" height="70"/> 
-          </div>
-
           <div class="flex flex-col text-center text-red-500">
             <i class="fa-brands fa-html5 fa-3x"></i>
             <h4 class="text-xl">HTML</h4>
           </div>
+
           <div class="flex flex-col text-center text-blue-600">
             <i class="fa-brands fa-css3-alt fa-3x"></i>
             <h4 class="text-xl">CSS</h4>
           </div>
+
           <div class="flex flex-col text-center text-yellow-500">
             <i class="fa-brands fa-js fa-3x"></i>
             <h4 class="text-xl">JAVASCRIPT</h4>
@@ -94,6 +85,17 @@
             <i class="text-6xl bx bxl-tailwind-css"></i>
             <h4 class="text-xl">Tailwind Css</h4>
           </div>
+
+          <div class="flex flex-col text-center text-blue-700">
+            <i class="fa-brands fa-python fa-3x"></i>
+            <h4 class="text-xl">Python</h4>
+          </div>
+
+          <div class="flex flex-col text-center text-yellow-500">
+            <i class="fa-brands fa- fa-3x"></i>
+            <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" class="fa-brands fa- fa-3x" alt="django" width="70" height="70"/> 
+          </div>
+
           <div class="flex flex-col text-center">
             <i class="fa-solid fa-database fa-3x"></i>
             <h4 class="text-xl">MYSQL</h4>
@@ -119,8 +121,9 @@
 
       <section class="bg-[#25262a] p-12 text-white max-sm:p-5">
         <div class="mb-10 font-mono text-3xl text-center">
-          <h3 class="">Projects</h3>
-          <p class="text-md">Things i have built so far</p>
+          <h2 class="">Projects</h2>
+          <br>
+          <p class="text-md">Things i have built so far.</p>
         </div>
         <div class="grid grid-cols-3 gap-x-3 gap-y-36 *:mb-4 mt-6 mb-20 max-sm:grid-cols-1">
           {% for project in projects %}
@@ -132,8 +135,10 @@
                 <i class="bx bxl-github" style="color: #ffffff"></i>
                 <a href="{{project.source_link}}" target='_blank' class="text-red-500">{{project.title}}</a>
                 <br>
+                {% if project.live_link %}
                 <i class="bx bx-link" style="color: #ffffff"></i>
-                <a href="{{project.live_link}}" target="_blank" class="text-red-500">{{project.title}}</a>
+                <a href="{{project.live_link}}" target="_blank" class="text-red-500">{{project.live_link}}</a>
+                {% endif %}
               </div>
             </div>
           </div>

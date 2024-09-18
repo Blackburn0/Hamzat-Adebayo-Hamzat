@@ -12,8 +12,10 @@
             <img src="{{certification.image.url}}" class="rounded-md h-fit" alt=""/>
             <div class="p-4">
               <div>
+                {% if certification.live_link %}
                 <i class="bx bx-link" style="color: #ffffff"></i>
                 <a href="{{certification.live_link}}" target="_blank" class="text-red-500">{{certification.title}}</a>
+                {% endif %}
               </div>
             </div>
           </div>

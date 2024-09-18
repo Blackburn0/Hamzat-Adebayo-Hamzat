@@ -16,8 +16,10 @@
                 <i class="bx bxl-github" style="color: #ffffff"></i>
                 <a href="{{project.source_link}}" target='_blank' class="text-red-500">{{project.title}}</a>
                 <br>
+                {% if project.live_link %}
                 <i class="bx bx-link" style="color: #ffffff"></i>
-                <a href="{{project.live_link}}" target="_blank" class="text-red-500">{{project.title}}</a>
+                <a href="{{project.live_link}}" target="_blank" class="text-red-500">{{project.live_link}}</a>
+                {% endif %}
               </div>
             </div>
           </div>
