@@ -1,0 +1,71 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block content %}
+  <!-- <body class="bg-[#1f1f1f]">    
+    <main class="p-20 max-sm:p-3"> -->
+      <section class="bg-[#25262a] p-12 text-white max-sm:p-5">
+        <div class="mb-10 font-mono text-2xl text-center">
+          <h3 class="">Work Experiance</h3>
+        </div>
+        {% for work in experiences %}
+        <div class="flex flex-col mb-3">
+          <div class="flex justify-between mt-3 text-white">
+            <h4 class="text-2xl font-semibold">{{work.title}}</h4>
+            <div class="p-2 bg-teal-500 rounded-full text">{{work.type}}</div>
+          </div>
+          <div class="text-white max-sm:p-2">
+            <p class="text-md max-sm:mb-3">
+                {{work.description|safe}}
+              </p>
+            </div>
+          <div class="flex justify-between mt-2 text-white">
+            <div>
+              <i class="bx bx-building"></i>
+              <p class="inline">{{work.company_name}}</p>
+            </div>
+            <div>
+              <i class="bx bx-calendar-alt"></i>
+              <p class="inline">{{work.start_date|date:"F Y"}} - 
+              {% if work.present %}
+                Present
+              {% else %}        
+                {{work.end_date|date:"F Y"}}        
+              {% endif %}
+                  </p>
+            </div>
+          </div>
+        </div>
+        <hr />
+        {% endfor %}
+      </section>
+      
+
+
+      <section class="p-10 mt-5 text-white max-sm:p-2">
+        <div class="mb-10 font-mono text-3xl text-center">
+          <h3 class="">Education</h3>
+        </div>
+        {% for education in educations %}
+        <div class="flex flex-col mb-3">
+          <div class="flex justify-between mt-3 text-white">
+            <h4 class="text-2xl">
+              <i class="bx bx-building"></i>
+              <p class="inline">{{education.school_name}}</p>
+            </h4>
+          </div>
+          <div class="flex justify-between mt-2 text-white">
+            <div>
+              <p class="inline">
+                {{education.course_name}}
+              </p>
+            </div>
+            <div>
+              <i class="bx bx-calendar-alt"></i>
+              <p class="inline">{{education.start_date|date:"F Y"}} - {{education.end_date|date:"F Y"}}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </section>
+
+  {% endblock content %}

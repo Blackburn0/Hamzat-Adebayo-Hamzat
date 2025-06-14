@@ -9,7 +9,9 @@
         <div class="grid grid-cols-3 gap-x-3 gap-y-36 *:mb-4 mt-6 mb-20 max-sm:grid-cols-1" >
           {% for certification in certifications %}
           <div class="rounded-md shadow-2xl w-80">
-            <img src="{{certification.image.url}}" class="rounded-md h-fit" alt=""/>
+            <a href="{{certification.image.url}}" target="_blank">
+              <img src="{{certification.image.url}}" class="rounded-md h-fit" alt=""/>
+            </a>
             <div class="p-4">
               <div>
                 {% if certification.live_link %}

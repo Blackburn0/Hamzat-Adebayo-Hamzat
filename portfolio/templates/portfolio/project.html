@@ -1,10 +1,10 @@
 {% extends "portfolio/base.html" %}
 {% load static %}
+{% block title %} Projects {% endblock title %}
 {% block content %}
       <section class="bg-[#25262a] p-12 text-white max-sm:p-5">
         <div class="mb-10 font-mono text-3xl text-center">
           <h3 class="">Projects</h3>
-          <p class="text-md">Things i have built so far</p>
         </div>
         <div class="grid grid-cols-3 gap-x-3 gap-y-36 *:mb-4 mt-6 mb-20 max-sm:grid-cols-1" >
           {% for project in projects %}
